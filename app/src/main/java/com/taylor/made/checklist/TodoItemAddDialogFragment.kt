@@ -5,6 +5,7 @@ import android.app.DatePickerDialog
 import android.app.Dialog
 import android.content.ContentValues
 import android.content.Context
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.WindowManager
@@ -56,7 +57,7 @@ class TodoItemAddDialog(context: Context) : Dialog(context) {
             cal.set(Calendar.MONTH, monthOfYear)
             cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
-            datePicker.text = ("$year-$monthOfYear-$dayOfMonth")
+            datePicker.text = ("$year-${monthOfYear+1}-$dayOfMonth")
         }
     }
 
